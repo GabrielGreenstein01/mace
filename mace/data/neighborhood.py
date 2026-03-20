@@ -25,7 +25,7 @@ def get_neighborhood(
     pbc_z = pbc[2]
     identity = np.identity(3, dtype=float)
     max_positions = np.max(positions, axis=0) - np.min(positions, axis=0)
-    padding = 1  # 1 angstrom padding
+    padding = 10  # 1 angstrom padding
 
     if not pbc_x:
         cell[0, :] = (max_positions[0] + cutoff + padding) * identity[0, :]
